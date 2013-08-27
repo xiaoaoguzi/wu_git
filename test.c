@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-fdajslfja
-
-
 int main(void)
 {
 	printf("hello world\n");
