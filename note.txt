@@ -1,0 +1,32 @@
+
+ubuntu linux10.10
+git 安装
+apt-get install git
+apt-get intall git-doc git-svn git-email git-gui gitk
+
+低版本ubuntu
+apt-get install git-core
+
+RHEL
+yum install git
+yum install git-doc git-svn git-email git-gui gitk
+
+查看git文档
+man git-checkout
+git help git-checkout
+
+HTML格式
+git help -w git-checkout
+
+创建版本库                           git init  
+将文件添加到本地版本库的索引中       git add test.c 
+提交，-m 是本次提交的备注 必须有     git commit -m "my test"
+查看日志							 git log
+恢复最近一次提交的状态               git checkout test.c
+查看当前分支                         git branch  
+创建新分支                           git branch test
+删除分支							 git branch -D test
+切换本地分支                         git checkout test
+
+
+
