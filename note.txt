@@ -64,6 +64,17 @@ git config branch.master.merge  refs/heads/master
 当前必须在master分支下默认的remote origin
 当你在master branch上使用git pull时，没有指定remote和branch，那么git就会采用默认的remote（也就是origin）来merge在master branch上所有的改变
 
+git push -u origin master 出现以下错误
+
+error: SSL certificate problem, verify that the CA cert is OK. Details:
+error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify
+failed while accessing https://github.com/xiaoaoguzi/redhat.git/info/refs
+
+解决方法:
+	export  GIT_SSL_NO_VERIFY=true
+
+
+
 
 查看所有分支（本地分支和远程分支）
 git branch -a
