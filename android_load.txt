@@ -1,0 +1,40 @@
+mkdir ~/bin
+PATH=~/bin:$PATH
+
+下载脚本repo repo是python脚本对git的封装
+curl  https://dl-ssl.google.com/dl/googlesource/git-repo/repo  > ~/bin/repo
+chmod a+x ~/bin/repo
+
+mkdir  android_source
+cd android_source
+
+下面是下子最新的android版本，即master分支
+repo init -u https://android.googlesource.com/platform/manifest
+如果想下其他分支
+repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.0_r1
+下载android中的一部分
+方法1：
+repo sync platform/bootable/recovery   会建立层次路径结构 platform/bootable/recovery
+
+方法2：
+git clone https://android.googlesource.com/<project name>
+例：git clone https://android.googlesource.com/platform/bootalbe/recovery  这样下载后就一个recovery文件夹
+
+开始下载源代码
+repo sync
+等待
+
+内核下载
+下面的命令可以下载最新的内核源代码
+git clone https://android.googlesource.com/kernel/common.git
+下载完后，有个common目录，进入此目录，执行下面的命令查看当前有哪些远程版本库
+git branch -a
+
+导出指定的linux3.0内核
+git checkout -b android-3.0 remotes/origin/android-3.0
+
+模拟器的linux内核goldfish(基本无用)
+git clone https://android.googlesource.com/kernel/goldfish.git
+下载完后进入goldfish目录，执行下面命令导出goldfish
+git checkout -b android-goldfish-2.6.29 remotes/origin/android-goldfish-2.6.29
+
