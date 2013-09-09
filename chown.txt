@@ -1,0 +1,3 @@
+更改文件所有者所有组
+
+chown -R  wujiwang.wujiwang tile
