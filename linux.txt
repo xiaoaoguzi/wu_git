@@ -1,2 +1,7 @@
 
 登录后最后执行的文件为：/etc/rc.local
+
+
+gcc -E  -S  -c   -o
+     -i  -s  -o 
+

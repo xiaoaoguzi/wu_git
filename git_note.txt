@@ -1,0 +1,91 @@
+
+ubuntu linux10.10
+git 安装
+apt-get install git
+apt-get intall git-doc git-svn git-email git-gui gitk
+
+低版本ubuntu
+apt-get install git-core
+
+RHEL
+yum install git
+yum install git-doc git-svn git-email git-gui gitk
+
+查看git文档
+man git-checkout
+git help git-checkout
+
+HTML格式
+git help -w git-checkout
+
+创建版本库                           git init  
+将文件添加到本地版本库的索引中       git add test.c 
+提交，-m 是本次提交的备注 必须有     git commit -m "my test"
+查看日志							 git log
+恢复最近一次提交的状态               git checkout test.c
+查看当前分支                         git branch  
+创建新分支                           git branch test
+删除分支							 git branch -D test
+切换本地分支                         git checkout test
+
+
+
+在github上创建开源项目
+网址：https://github.com/
+
+上传源代码： 
+ssh-keygen -t rsa -C "xiaoaoguzi@sina.com"
+在~/.ssh/id_rsa.pub中的文本全部复制，在网页上的设置页面选择SSH Public Keys  Title随便输入 将复制的文本复制到key中
+
+检测公钥密钥是否正确 ssh -T git@github.com
+
+/****************/
+如果上面的都成功了但还不能测试,向代理身份验证添加RSA身份
+ssh-add
+/****************/
+配置读者的名字和email
+git config --global wujiwang.wujiwang "wujiwang"
+git config --global wujiwang.email   xiaoaoguzi@sina.com
+
+设置工程在github上的URI
+git remote add origin git@github.com:xiaoaoguzi/wu_git.git
+origin 源代码库名，可以任意取名
+
+将本地版本库中的文件上传到GitHub
+git push -u origin master
+master 是远程版本库origin中的主分支
+注意：此时会遇到问题，他不给你上传，说是怕覆盖以前的文件(non-fast-forward)要你先git pull
+两种方法：
+1.强推  git push -f
+2.git pull  但在此之前先要告诉他两件事
+git config branch.master.remote origin
+git config branch.master.merge  refs/heads/master
+
+当前必须在master分支下默认的remote origin
+当你在master branch上使用git pull时，没有指定remote和branch，那么git就会采用默认的remote（也就是origin）来merge在master branch上所有的改变
+
+git push -u origin master 出现以下错误
+
+error: SSL certificate problem, verify that the CA cert is OK. Details:
+error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify
+failed while accessing https://github.com/xiaoaoguzi/redhat.git/info/refs
+
+解决方法:
+	export  GIT_SSL_NO_VERIFY=true
+
+
+
+
+查看所有分支（本地分支和远程分支）
+git branch -a
+
+从github上下载源代码：git clone
+下载整个工程
+git clone git@github.com:xiaoaoguzi/wu_git.git
+
+如果想获得某一分支的最新内容
+git pull origin master
+
+
+
+
