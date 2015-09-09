@@ -1,0 +1,8 @@
+yum install zlib-devel
+yum install gettext-devel
+yum install openssl-devel
+yum install curl-devel 
+yum install expat-devel 
+
+
+wget http://kernel.org/pub/software/scm/git/xxxxx(git-1.7.2.tar.gz) 
