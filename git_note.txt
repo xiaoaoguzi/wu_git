@@ -18,6 +18,12 @@ git help git-checkout
 HTML格式
 git help -w git-checkout
 
+
+建立git服务器
+sudo git init --bare sample.git
+sudo chown -R yourname:yourgroup sample.git
+禁用shell登录 /etc/passwd    /bin/bash 改为/bin/git-shell
+
 创建版本库                           git init  
 将文件添加到本地版本库的索引中       git add test.c 
 提交，-m 是本次提交的备注 必须有     git commit -m "my test"
