@@ -1,4 +1,3 @@
-
 ubuntu linux10.10
 git 安装
 apt-get install git
