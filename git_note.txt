@@ -103,6 +103,8 @@ git clone git@github.com:xiaoaoguzi/wu_git.git
 如果想获得某一分支的最新内容
 git pull origin master
 
+git reset --hard  HEAD^
+git reset --hard  321455
 
 .gitignore
 
