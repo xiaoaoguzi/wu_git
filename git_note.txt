@@ -1,9 +1,27 @@
 www.liaoxuefeng.com
 
+ssh-keygen -t rsa -C "xiaoaoguzi@sina.com"
+sudo -H -u git gitosis-init < /tmp/id_rsa.pub 创建gitosis-init
+id_rsa.pub的拥有者会有管理员权限，添加管理元请配置gitosis.conf
+mkdir test
+cd test
+git init --bare
+
+
 gitosis.conf中
 
 members = jhb68059@btf wjw test ###均为keydir目录下的文件名称
 writable = test  ##test.git 这个目录
+
+如果想获得某一分支的最新内容
+git pull origin master
+
+git reset --hard  HEAD^
+git reset --hard  321455
+git reflog  查看更改日志
+git checkout -- filename git checkout 放弃工作区的更改
+.gitignore
+
 
 
 
@@ -99,13 +117,4 @@ git branch -a
 从github上下载源代码：git clone
 下载整个工程
 git clone git@github.com:xiaoaoguzi/wu_git.git
-
-如果想获得某一分支的最新内容
-git pull origin master
-
-git reset --hard  HEAD^
-git reset --hard  321455
-
-.gitignore
-
 
