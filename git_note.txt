@@ -16,8 +16,9 @@ writable = test  ##test.git 这个目录
 如果想获得某一分支的最新内容
 git pull origin master
 
-git reset --hard  HEAD^
-git reset --hard  321455
+git reset --hard  HEAD^ -- file
+git reset --hard  321455  -- file
+git reset --hard  HEAD~10 -- file
 git reflog  查看更改日志
 git checkout -- filename git checkout 放弃工作区的更改
 .gitignore
