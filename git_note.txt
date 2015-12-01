@@ -19,12 +19,37 @@ git pull origin master
 git reset --hard  HEAD^ -- file
 git reset --hard  321455  -- file
 git reset --hard  HEAD~10 -- file
+
+git reset --<mode>
+--soft
+    Does not touch the index file nor the working tree at all (but resets the head to <commit>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it.
+--mixed
+
+    Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
+--hard
+
+    Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.
+
+
+
 git reflog  查看更改日志
 git checkout -- filename git checkout 放弃工作区的更改
+
+删除文件
+git rm $(git ls-files --deleted)
+git status
+
+移除所有未跟踪文件
+git clean [options]  一般会加上参数-df，-d表示包含目录，-f表示强制清除。
+
+
 .gitignore
-
-
-
+#此为注释，会被git忽略
+*.a #忽略所有.a结尾的文件
+！lib.a #但lib.a除外
+/todo #仅仅忽略项目根目录下/todo 文件,不包含subdir/sodo
+build/ # 忽略build目录下所有文件
+doc/*.txt #忽略doc/*.txt
 
 ubuntu linux10.10
 git 安装
@@ -118,4 +143,35 @@ git branch -a
 从github上下载源代码：git clone
 下载整个工程
 git clone git@github.com:xiaoaoguzi/wu_git.git
+
+
+git stash 想干其他事情但当前事情只干了一半
+此时如果想切换分支就可以执行以下命令
+git stash
+
+这时你会发现你的工作目录变得很干净了，就可以随意切分支进行其他事情的处理了。
+我们可能不只一次进行"git stash"，通过以下命令可以查看所有stash列表
+$ git stash list
+stash@{0}: WIP on master: 049d078 added the index file
+stash@{1}: WIP on master: c264051... Revert "added file_size"
+
+当紧急事情处理完了，需要重新回来这里进行原来的工作时，只需把Stash区域的内容取出来应用到当前工作目录就行，命令就是
+git stash apply
+如果不基参数就应用最新的stash，或者可以指定stash的名字，如：stash@{1}，可能通过
+git stash show
+显示stash的内容具体是什么，同git stash apply一样，可以选择指定stash的名字。
+git stash apply之后再git stash list会发现，apply后的stash还在stash列表中，如果要将其从stash列表中删除可以用
+git stash drop
+丢弃这个stash，stash的命令参数都可选择指定stash名字，否则就是最新的stash。
+一般情况下apply stash后应该就可以把它从stash列表删除了，先apply再drop还是比较繁琐的，使用以下一条命令就可以同时完成这两个操作
+git stash pop
+如果我们执行git stash时工作目录的状态是部分文件已经加入了暂存区，部分文件没有，当我们执行git stash apply之后会发现所有文件都变成了未暂存的，如果想维持原来的样子操持原来暂存的文件仍然是暂存状态，可以加上--index参数
+git stash apply --index
+还有这么一种情况，我们把原来的修改stash了，然后修复了其他一些东西并进行了提交，但是，这些提交的文件有些在之前已经被stash了，那么git stash apply时就很可能会遇到冲突，这种情况下就可以在stash时所以提交的基础上新建一个分支，然后再apply stash，当然，这两个步骤有一人简单的完成方法
+git stash branch <branch name>
+
+
+分支合并
+git checkout master
+git merge test1
 

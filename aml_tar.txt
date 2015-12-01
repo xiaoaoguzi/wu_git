@@ -1,0 +1,31 @@
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/english/aml_butterfly_v4   aml_butterfly_v4_english.tar.gz  2015-07-28---2015-09-24
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/t826_hd   aml_20150612_T826.tar.gz 2014-06-20----2015-09-28
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/target_files_intermediates  target_files_intermediates  2015-10-16
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/Y1   Y1_Settings.tar.gz  2015-08-10----2015-08-22
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/z_20151010_ui_set   z_20151010_ui_set.tar.gz    2015-10-10
+/home/disk1/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/z_32   aml_butterfly_v4_z32.tar.gz    2015-09-11----2015-09-19
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/z_new_2008_piqs     z_new_2008_piqs.tar.gz  2015-09-22-----2015-10-15
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/z_shenji    aml_butterfly_z_shenji.tar.gz    2015-10-19------2015-10-21
+/home/disk1/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/Z_V4/aml_butterfly_v4  aml_butterfly_Z_V4.tar.gz 2015-07-17----2015-10-16
+/home/disk1/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/z_v4_newfan aml_butterfly_z_v4_newfan.tar.gz 2015-9-12---2015-9-24 common 2015-10-14 
+/fsl_4.4/chenmy_fsl4.2/cq/home/mimi/siren/Z_V4_old  aml_Z_V4_old.tar.gz 2015-10-16----2015-10-21
+
+/fsl_4.4/Bin_R2_M12_ZUI_32MB_ATVMM  Bin_R2_M12_ZUI_32MB_ATVMM.tar.gz 2015-01-26
+
+/home/disk1/fsl_4.4/chenmy_fsl4.2/32g     aml_s802_v4_720_32G.tar.gz   2015-06-29----2015-08-26
+/fsl_4.4/chenmy_fsl4.2/miracast  miracast   2014-11-20-----2015-7-12
+/fsl_4.4/chenmy_fsl4.2/newmicracast newmicracast.tar.gz   2014-06-11---2015-07-12
+/fsl_4.4/chenmy_fsl4.2/oldmicracast oldmicracast.tar.gz   2014-06-11---2014-11-20
+
+/fsl_4.4/cmyaml/cm/sim/new_y1/shenjibao/new_8_piqs aml_new_8_piqs.tar.gz 2015-10-08---2015-10-16
+/fsl_4.4/cmyaml/cm/sim/y2_32/new_8_piqs_y2  aml_new_8_piqs_y2.tar.gz   2015-10-19----2015-10-22  
+/fsl_4.4/cmyaml/cm/sim/826_hd1021/t866_code  t866_code.tar.gz  2015-07-02----2015-10-22
+
+
+/home/disk1/fsl_4.4/cmyaml/20150930_fsl2   
+/fsl_4.4/fsl4.4_Doc_soft  fsl4.4_Doc_soft.tar.gz 2014-09-29
+/fsl_4.4/lib  lib_lzo_util.tar.gz 2014-10-31
+
+/fsl_4.4/cmyaml/20150930_fsl/fsl_user/myandroid_4.2.2_user/jhb
+/mnt/mount/fsl_4.4/cmyaml/wujiwang
+/fsl_4.4/cmyaml/cm/sim
